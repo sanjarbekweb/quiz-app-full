@@ -1,0 +1,342 @@
+/* body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+#quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.question-card {
+  background: #fff;
+  padding: 16px;
+  padding-top: 5px;
+  width: 400px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.options label {
+  display: block;
+  margin: 5px 0;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.btn.check { background: #4CAF50; color: white; }
+.btn.add { background: #2196F3; color: white; }
+.btn.save { background: #673AB7; color: white; }
+.btn.cancel { background: #f44336; color: white; }
+.btn.small { font-size: 12px; padding: 6px 10px; }
+
+.question-actions {
+  position: absolute;
+  top: 26px;
+  right: 8px;
+}
+
+.question-actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: rgba(0,0,0,0.3);
+}
+
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  } */
+  
+  
+  /* Yangilangan CSS */
+  body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  .title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  #quiz-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .question-card {
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.question-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+  margin-top: 16px;
+}
+
+.options label {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.options label:hover {
+  background: #e9ecef;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.question-actions {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.question-actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6c757d;
+  transition: color 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.question-actions button:hover {
+  color: #2c3e50;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn.check {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+}
+
+.btn.check:hover {
+  background: linear-gradient(135deg, #45a049, #3e8e41);
+  transform: translateY(-2px);
+}
+
+.btn.add {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+}
+
+.btn.add:hover {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  transform: translateY(-2px);
+}
+
+.btn.save {
+  background: linear-gradient(135deg, #673ab7, #5e35b1);
+  color: white;
+}
+
+.btn.save:hover {
+  background: linear-gradient(135deg, #5e35b1, #512da8);
+  transform: translateY(-2px);
+}
+
+.btn.cancel {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+}
+
+.btn.cancel:hover {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  transform: translateY(-2px);
+}
+
+.btn.small {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+.resulter {
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.correct {
+  color: #28a745;
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.wrong {
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  transition: backdrop-filter 0.3s ease;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#options-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#question-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+
+#answer-input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+
+/* Savol inputi uchun stil */
+#question-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Option inputlari uchun stil */
+.option-input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.hidden { display: none !important; }

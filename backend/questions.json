@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "O‘zbekiston poytaxti qaysi?",
+    "options": [
+      "Toshkent",
+      "Samarqand",
+      "Buxoro",
+      "Xiva"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 2,
+    "question": "2 + 2 = ?",
+    "options": [
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 3,
+    "question": "men",
+    "options": [
+      "yoq",
+      "ha"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 4,
+    "question": "salom",
+    "options": [
+      "men",
+      "yoq",
+      "ha"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "question": "salom",
+    "options": [
+      "men",
+      "yoq",
+      "ha"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 6,
+    "question": "salom",
+    "options": [
+      "men",
+      "yoq",
+      "ha"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "question": "salom",
+    "options": [
+      "men",
+      "yoq",
+      "ha"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 8,
+    "question": "salom",
+    "options": [
+      "haha",
+      "hh",
+      "hh"
+    ],
+    "answer": 1
+  }
+]
